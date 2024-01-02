@@ -8,12 +8,12 @@ import time
 import threading
 # this is where your wechat files are stored, change it to your own path
 windows_username = os.environ['USERNAME']
-src_folder = "C:\\Users\\windows_username\\Documents\\WeChat Files"
+src_folder = f"C:\\Users\\{windows_username}\\Documents\\WeChat Files"
 ext_list = ['jpg','png','gif','bmp','jpeg','webp','ico','pdf','doc','docx','xls','xlsx','ppt','pptx','txt','zip','rar','7z','exe','apk','ipa','dmg','mp4','mkv','avi','rmvb','rm','wmv','mov','mp3','wav','aac','flac','ogg','wma','ape','flac','ape','aac','ogg','wma','ape']
 skip_extensions = ['crdownload','tmp','ini']
-dst_folder = "C:\\Users\\windows_username\\Downloads\\"
+dst_folder = f"C:\\Users\\{windows_username}\\Downloads\\"
 # history file path in user directory
-history_file_path = "C:\\Users\\windows_username\\history_record.txt"
+history_file_path = f"C:\\Users\\{windows_username}\\history_record.txt"
 
 # function to watch src folder, with os.walk function, if there is a new file, copy it to dst folder,there is a history record, so it will not copy the same file again
 def watch_folder(src_folder, dst_folder, ext_list, skip_extensions):
